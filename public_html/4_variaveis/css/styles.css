@@ -4,7 +4,9 @@ h1 {
 
 p {
   color: #123;
-  border: 2px solid red; }
+  border: 2px solid red;
+  margin: 12px;
+  padding: 16px; }
 
 a {
   color: #123; }
@@ -12,7 +14,8 @@ a {
 div p {
   border: 3px dotted green;
   background-color: green;
-  color: #FFF; }
+  color: #FFF;
+  margin: 12px; }
 
 h2 {
   color: green;
