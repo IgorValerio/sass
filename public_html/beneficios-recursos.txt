@@ -1,0 +1,104 @@
+Benefícios / Recursos do SASS	Variaveis: reaproveitamento de estilos em todo o projeto, facilidade
+de manutenção. Nesting: encadeamento de seletores de css. Partials: Divisão de responsabilidades
+no CSS; Mixins: especie de função, para reaproveitamento de estilo e muito mais.
+
+Comando para gerar css minificado: sass --watch sass/css.sass:css/styles.min.css     
+
+Seção 3: Nesting
+
+//Nesting é a possibilidade de aninhar seletores
+//Deixando mais lógica a estilização de elementos, pois segue o padrão de como o HTML está desenhado pelas tags;
+//Tome cuidado com o uso escessivo de nesting pode confundir invez de ajudar.
+
+//----Listas com nesting
+//Podemos separar os elementos com virgula no nesting;
+//O SASS vai entender quer queremos selecionar mais de um elemento seguindo o padrão de aninhamento;
+//Tanto para os níveis superiores quanto para os níveis inferiores
+
+//----Prioridade no SASS
+O CSS é em cascata, então os de baixo tem mais prioridade que os de cima, então no caso de cima o main de baixo tem maior
+//prioridade que o de cima.
+
+//----Nesting com combinators
+Os simbolos dos combinators (+,>,~) tambḿ podem ser utilizados com o nesting
+
+ol
+
+  > li
+    color: blue
+
+//----Parent selector
+É um seletor especial que serve para se referir ao elementoexterno/elemento pai;
+Utilizamos o símbolo &;
+Podemos criar hovers facilmente na mesma regra, por exemplo, sem
+precisar uma nova para o efeito.
+
+a
+  text-decoration: none
+  color: green
+  transform: .5s
+  padding: 10px
+  border: 1px solid green
+  display: block
+  width: 150px
+  text-align: center
+
+  &:hover
+    background-color: green
+    color
+
+CSS:
+    a:hover
+    background-color: green
+    color
+
+//----Adicionando sufixo
+Podemos utilizar o parent selector para adicionar sufixos também;
+Desta forma criamos classes variantes e mais complexas do elemento alvo;
+Por exemplo botões diferentes:
+.button
+    &-danger
+    &-success
+
+//----Placeholder selector
+Estes seletores não criam código CSS;
+Podem ser utilizados para estender alguma outra classe;
+O símbolo para o Placeholder é o %;
+Ou seja, quando atribuimos a um elemento um extend de um Placeholder,
+estamos transferindo os estilos para este elemento;
+
+ex: 
+
+%base-title-style
+  border-bottom: 2px dotted red
+  padding: 10px
+  background-color: yellow
+  text-align: center
+
+.title
+  font-size: 30px
+  @extend %base-title-style
+
+.sub-title
+  font-size: 25px
+  @extend %base-title-style
+
+============================================================
+
+Daqui pra baixo nao foi pro anki ===========================
+
+============================================================
+
+//----Variaveis
+Um recurso para salvar um valor na memoria do computador e utiliza-lo
+posteriormente em qualquer lugar do codigo;
+No SASS utilizamos o símbolo $ para variaveis.
+Normalmente as variaveis em SASS são declaradas com um hífen;
+$primary-color: #DDD;
+
+//----Escopo
+As variaveis declaradas fora de blocos podem ser acessadas em qualquer
+bloco.
+Já as variaveis declaradas em um bloco só podem ser acessadas pelo
+bloco e seus elementos filhos;
+Normalmente declaramos variaveis globais;
