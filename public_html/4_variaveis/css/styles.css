@@ -1,16 +1,21 @@
 h1 {
-  color: #321; }
+  color: #123;
+  border: 2px solid red; }
 
 p {
-  color: #321; }
+  color: #123;
+  border: 2px solid red; }
 
 a {
-  color: #321; }
-  a div p {
-    background-color: gree;
-    color: #FFF; }
+  color: #123; }
+
+div p {
+  border: 3px dotted green;
+  background-color: green;
+  color: #FFF; }
 
 h2 {
-  color: gree; }
+  color: green;
+  font-size: 3rem; }
 
 /*# sourceMappingURL=styles.css.map */

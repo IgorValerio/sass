@@ -1,21 +1,23 @@
-$text-color: #321
-$font-color: blue
-$h2-color: gree
+@import 'variables'
 
 h1
   color: $text-color
-
+  border: $border
 p
   color: $text-color
-
+  border: $border
 a
   color: $text-color
 
-  div
-    p
-      $font-color: #FFF
-      background-color: $h2-color
-      color: #FFF
+div
+  p
+    //Shadowing
+    $border: 3px dotted green
+    border: $border
+    $font-color: #FFF
+    background-color: $h2-color
+    color: #FFF
 
 h2
   color: $h2-color
+  font-size: $main-font

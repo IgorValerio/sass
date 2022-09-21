@@ -102,3 +102,24 @@ bloco.
 Já as variaveis declaradas em um bloco só podem ser acessadas pelo
 bloco e seus elementos filhos;
 Normalmente declaramos variaveis globais;
+
+//----Shadowing
+É um recurso que permite ter duas variavies com mesmo nome
+A variavel com escopo global tem o seu valor mantido para os demais
+elementos
+Já a variável local tem o valor valido apenas para o seu bloco
+
+div
+  p
+    //Shadowing
+    $border: 3px dotted green
+    border: $border
+    $font-color: #FFF
+    background-color: $h2-color
+    color: #FFF
+
+//----Modulos de variaveis
+Podemos externalizar as variaveis em um arquivo
+Então ele será responsavel pela declaração de variáveis
+Adicionando uma orgnização maior ao nosso projeto
+Vamos chamar o arquivo de variaveis com @import
