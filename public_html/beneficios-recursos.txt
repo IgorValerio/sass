@@ -123,3 +123,92 @@ Podemos externalizar as variaveis em um arquivo
 Então ele será responsavel pela declaração de variáveis
 Adicionando uma orgnização maior ao nosso projeto
 Vamos chamar o arquivo de variaveis com @import
+
+//----Partials
+Podemos criar um arquivo e invocar o mesmo em um outro arquivo de SASS
+Esta técnica é chamada de partials
+Por convenção os partials começam com inderline, exemplo: _button.sass
+Podemos invocar um partial 
+
+//----Mixins
+São como funções, podemos definir um codigo que podera ser reutilizado
+ao longo do projeto.
+
+A sintax é: 
+          @mixin nome
+            regras
+
+Podemos criar um arquivo apenas com mixins, e importar ele no projeto
+principal.
+
+@mixin special
+  color: red
+  background-color: yellow
+  padding: 10px
+  border: 1px solid red
+
+  &:hover
+    border-color: blue
+    color: blue
+
+@mixin green
+  border-color: green
+  color: green
+
+.p-esp
+  @include special
+
+h2
+  @include special
+  @include green
+
+//----Mixins com parâmetros
+
+Os mixins podem receber argumentos ou parametros deixando nosso codigo
+ainda mais dinamico.
+Os argumentos devem ficar depois do nome e entre parênteses;
+Esta é a sintax:
+            @mixin calc($a, $b)
+
+Quando eu sei que posso criar um mixin ? 
+quando algum padrao de codigo se repete, ex:
+
+  .esp-menor
+    padding:10px;
+    margin: 10px;
+
+  .esp-medio
+    padding:10px;
+    margin: 10px;
+
+@mixin espacamento($p, $m)
+  padding: $p
+  margin: $m
+
+.esp-menor
+    @include espacamento(10px, 10px)
+    border: 1px solid red
+
+  .esp-medio
+    @include espacamento(15px, 15px)
+    border: 1px solid blue
+
+  .esp-maior
+    @include espacamento(25px, 25px)
+    border: 1px solid green
+
+  .esp-maior-ainda
+    $pad: 50px
+    $mag: 50px
+    @include espacamento($pad, $mag)
+    border: 1px solid gold
+
+//Argumentos opcionais
+
+Os mixins podem receber argumentos opcionais, ou seja, que ja tem um
+valor pré-definido;
+Se não passarmos um valor, ele vai utilizar o já definido;
+Estes argumentos devem ficar depois dos obrigatórios;
+Veja:
+  @mixin opcional($a, $b: 10)
+
