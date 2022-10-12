@@ -83,12 +83,6 @@ ex:
   font-size: 25px
   @extend %base-title-style
 
-============================================================
-
-Daqui pra baixo nao foi pro anki ===========================
-
-============================================================
-
 //----Variaveis
 Um recurso para salvar um valor na memoria do computador e utiliza-lo
 posteriormente em qualquer lugar do codigo;
@@ -203,7 +197,7 @@ quando algum padrao de codigo se repete, ex:
     @include espacamento($pad, $mag)
     border: 1px solid gold
 
-//Argumentos opcionais
+//----Argumentos opcionais
 
 Os mixins podem receber argumentos opcionais, ou seja, que ja tem um
 valor pré-definido;
@@ -212,3 +206,38 @@ Estes argumentos devem ficar depois dos obrigatórios;
 Veja:
   @mixin opcional($a, $b: 10)
 
+@mixin borda($style, $color, $width)
+  border: 
+
+  ============================================================
+
+Daqui pra baixo nao foi pro anki ===========================
+
+============================================================
+
+
+
+
+  ============================================================
+
+Daqui eu pulei pra Sessão 7 - Arquitetura mas preciso revisar
+e terminar a sessão anterior   ===========================
+
+============================================================
+
+//---- @use 
+A diretiva @use é semelhante ao @import, porem mais nova e 
+performática (lançou no fim de 2019)
+Também é indicada pela documentação do SASS como mais indicada 
+para importar arquivos;
+O @use deve ser sempre a primeira regra do arquivo.
+E nos dá acesso aos módulos do SASS, que aprenderemos futuramente.
+
+//----Arquitetura SMACSS
+SMACSS é referência que vamos utilizar para arquitetar nosso SASS;
+Neste padrão o CSS é dividido em partes.
+Base: regras básicas de estilo, elementos gerais.
+Layout: Elementos que formam a página, ex: header;
+Module: Componentes menores;
+State e Theme: regras que sobrepõe outras e cores do tema;
+Vamos adaptar e trazer isso para realidade do SASS;
