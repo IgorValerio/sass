@@ -268,3 +268,10 @@ Vamos agora criar alguns estilos de base;
 Podemos estilizar tags como: body, a, p;
 Não utilizamos classes nem ids;
 A ideia é pré-estilizar elementos em arquivos separados;
+
+//----Estilos de layouts
+Vamos agora criar alguns estilos de layouts
+Aqui podemos adicionar ids e classes as regras;
+A ideis é estilizar Componentes maiores, como o cabeçalho da 
+página (header).
+Novamente podemos separar elementos em arquivos distintos
