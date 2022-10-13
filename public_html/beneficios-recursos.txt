@@ -241,3 +241,10 @@ Layout: Elementos que formam a página, ex: header;
 Module: Componentes menores;
 State e Theme: regras que sobrepõe outras e cores do tema;
 Vamos adaptar e trazer isso para realidade do SASS;
+
+//----O arquivo principal
+O arquivo principal vai apenas realizar importações, não vamos 
+adicionar estilos a ele;
+Podemos chamá-los de main.sass ou app.sass;
+As pastas de outros módulos iniciam com números, por exemplo:
+0-plugins;
