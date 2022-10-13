@@ -248,3 +248,11 @@ adicionar estilos a ele;
 Podemos chamá-los de main.sass ou app.sass;
 As pastas de outros módulos iniciam com números, por exemplo:
 0-plugins;
+
+//----Estrutura de pastas
+Estas são as pastas que vamos criar e tambem os significados de cada
+uma.
+0-plugins: Frameworks ou códigos de terceiros;
+1-base: Arquivos de estilo base;
+2-layouts: Arquivos para elementos que formam o layout da página;
+3-modules: Componentes das páginas;
