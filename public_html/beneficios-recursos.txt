@@ -256,3 +256,15 @@ uma.
 1-base: Arquivos de estilo base;
 2-layouts: Arquivos para elementos que formam o layout da página;
 3-modules: Componentes das páginas;
+
+//----Arquivo principal do subdiretório
+O arquivo principal do subdiretório também só irá importar arquivos;
+Isso vai diminuir os imports no nosso arquivo principal;
+Organizando ainda mais a estrutura;
+Nomenclatura para 1-base => base.sass
+
+//----Estilos de base
+Vamos agora criar alguns estilos de base;
+Podemos estilizar tags como: body, a, p;
+Não utilizamos classes nem ids;
+A ideia é pré-estilizar elementos em arquivos separados;
