@@ -275,3 +275,10 @@ Aqui podemos adicionar ids e classes as regras;
 A ideis é estilizar Componentes maiores, como o cabeçalho da 
 página (header).
 Novamente podemos separar elementos em arquivos distintos
+
+//----Estilos de modules
+Vamos agora criar estilos de module
+Aqui podemos adicionar ids e classes as regras
+Vamos colocar nossos Componentes menores: cards, botões, algum
+elemento na sidebar;
+Podemos também separar cada um deles em um arquivo;
